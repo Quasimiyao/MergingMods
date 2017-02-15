@@ -17,10 +17,9 @@
 	<!-- JOEL: change "respawndelay" to world days, change "maxcount" to entities per area -->
 <!-- Diersville -->	
     <biome name="city">
-        <spawn maxcount="4" respawndelay="1" time="Day" entitygroup="ZombiesAll" />
-		<spawn maxcount="1" respawndelay="1" time="Any" entitygroup="ZombiesUnique" />
-        <spawn maxcount="4" respawndelay="1" time="Night" entitygroup="ZombiesNight" />
-		<spawn maxcount="1" respawndelay="1" time="Any" entitygroup="ZombieDogGroup" />
+		<spawn maxcount="1" respawndelay="4" time="Any" entitygroup="SnowZombies" />
+		
+       	<spawn maxcount="1" respawndelay="8" time="Any" entitygroup="AnimalsAll" spawnDeadChance="0" />
     </biome>
 <!-- Gravestown & Perishton-->
     <biome name="city_wasteland">
@@ -780,7 +779,7 @@
 		  <property name="DelayBetweenSpawns" value="1" />
 		  <property name="TotalAlive"         value="6" />
 		  <property name="TotalPerWave"       value="6" />
-		</day>			
+		</day>		
 	</entityspawner>
 	
 	<entityspawner name="RoamingHordeSpawnNight" dynamic="true" wrapMode="wrap">
@@ -931,6 +930,7 @@
 		  <property name="TotalAlive"         value="0" />
 		  <property name="TotalPerWave"       value="0" />
 		</day>	
+		
 		<day value="22">
 			<property name="EntityGroupName"    value="ZombiesNight" />
 			<property name="Time"               value="Any" />
@@ -1288,7 +1288,7 @@
 			<property name="TotalPerWave"       value="60" />
 		</day>
 	</entityspawner>
-		
+
 <entityspawner name="SpawnSchool">
 	<day value="*">
 		<property name="ResetToday"        value="false" />
